@@ -33,7 +33,7 @@ void make_rectangle_program_3d(){
     int i = 0;
     glutInit(&i, NULL);
     glutInitWindowSize(500,500);
-    glutCreateWindow("Connor's Spectacular Rectangle Program");
+    glutCreateWindow("Connor's Splendiferous Cube Program");
     glClear(GL_COLOR_BUFFER_BIT);
     glutDisplayFunc(display3d);
     glutKeyboardFunc(keeb3);

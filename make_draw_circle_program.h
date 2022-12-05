@@ -54,7 +54,7 @@ void make_draw_circle_program(){
     int i = 0;
     glutInit(&i, NULL);
     glutInitWindowSize(500,500);
-    glutCreateWindow("cg");
+    glutCreateWindow("Connor's Unfathomably Fantastic Circle Program");
 
     glutDisplayFunc(displaydc);
     glutKeyboardFunc(keeb);
