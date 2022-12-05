@@ -1,4 +1,6 @@
 #include <iostream>
+#include "GL/freeglut.h"
+#include "GLUT/glut.h"
 #include "vocab.h"
 #include "projects.h"
 
