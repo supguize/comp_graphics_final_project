@@ -9,6 +9,7 @@ void handler(unsigned char key, int x, int y){
     if (key == 'q'){
         int win = glutGetWindow();
         glutDestroyWindow(win);
+        exit(0);
     }//end if
 }//end handler
 
@@ -82,7 +83,7 @@ void bcurve(std::vector<std::vector<float> > p_list){
     }//end for
 }//end bcurve
 
-void display(){
+void displaybc(){
     float point_col[] = {0, 1, 0};
     glClear(GL_COLOR_BUFFER_BIT);
     for (int a = 0; a < points.size(); a ++){
@@ -105,7 +106,7 @@ void make_bezier_curve_program(){
     glutCreateWindow("Connor's Beautiful Bezier");
 
     glutMouseFunc(inputs);
-    glutDisplayFunc(display);
+    glutDisplayFunc(displaybc);
     glutSpecialFunc(special_window);
     glutKeyboardFunc(handler);
     std::cout << "Here is the graphic for make_bezier_curve_program." << std::endl;

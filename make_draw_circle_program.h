@@ -40,6 +40,14 @@ void displaydc(){
   glFlush();
 }
 
+void keeb(unsigned char key, int x, int y){
+    if (key == 'q'){
+        int win = glutGetWindow();
+        glutDestroyWindow(win);
+        exit(0);
+    }//end if
+}//end keeb
+
 void make_draw_circle_program(){
     std::cout << "Here is the graphic for make_draw_circle_program." << std::endl;
     std::cout << std::endl;
@@ -49,6 +57,7 @@ void make_draw_circle_program(){
     glutCreateWindow("cg");
 
     glutDisplayFunc(displaydc);
+    glutKeyboardFunc(keeb);
 
     glutMainLoop();
     

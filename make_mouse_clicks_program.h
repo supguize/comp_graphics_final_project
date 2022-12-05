@@ -20,6 +20,14 @@ void draw_filled_circle(float x, float y, float r, float c[]){
     glEnd();
 }
 
+void keeb1(unsigned char key, int x, int y){
+    if (key == 'q'){
+        int win = glutGetWindow();
+        glutDestroyWindow(win);
+        exit(0);
+    }//end if
+}//end keeb1
+
 void init(){
     glViewport( 0,0, 500, 500 );
     glMatrixMode( GL_PROJECTION );
@@ -63,6 +71,7 @@ void make_mouse_clicks_program(){
     glClear(GL_COLOR_BUFFER_BIT);
     glutMouseFunc(mouse_clicks);
     glutDisplayFunc(displaymc);
+    glutKeyboardFunc(keeb1);
 
     init();
     glutMainLoop();
